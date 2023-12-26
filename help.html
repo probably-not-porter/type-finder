@@ -11,7 +11,7 @@
         <link rel="icon" type="image/png" href="favicon.png">
         <style>
             p1{
-                width: 600px;
+                max-width: 600px;
                 display:block;
             }
         </style>
@@ -19,16 +19,27 @@
     <body>
         <div id="top-nav">
             <h1>How does this work?</h1>
+            <button onclick="location.href='index.html'" class="vote-btn">Take me back to the quiz!</button>
+            <button onclick="location.href='https://github.com/probably-not-porter/type-finder'" class="vote-btn">Check out the code!</button>
+            <button onclick="location.href='https://github.com/probably-not-porter/type-finder/issues'" class="vote-btn">Submit an issue</button>
         </div>
         <div id="content">
             <h3>The Premise</h3>
             <p1>
-                This is a silly little website to help you figure out what type you <span class='ghost'>(or your cat)</span> are.
+                This is a silly little website to help you figure out which Pokemon type you <span class='ghost'>(or your cat)</span> are.
                 It uses <a href="https://pokeapi.co/"><span class='electric'>PokeAPI</span></a> to get random PokeDex descriptions, which you can vote how much they relate.
                 After voting for a while, or after 80 questions, the types will be ranked in order of how much they match your answers.
             </p1>
             <br><br>
-            <h3>How is this scored</h3>
+            <h3>How do I play?</h3>
+            <p1>
+                When you start the quiz, you will be given a Description from the PokeDex.
+                You can vote how well that answer applies to you on a scale of <span class='fighting'>-2 (strongly disagree)</span> to <span class='grass'>+2 (strongly agree)</span>.
+                If the question does not apply, you can use the <span class='psychic'>Skip Question</span> button to load a new one. Using the skip option does not affect the scoring in any way.
+
+            </p1>
+            <br><br>
+            <h3>How is it scored?</h3>
             <p1>
                 Scores for types are determined as a percentage range from <span class='fighting'>0.00%</span> to <span class='grass'>100.00%</span>.
                 A score of <span class='grass'>100.00%</span> means that all your answers strongly agreed with each example of that type.
@@ -49,8 +60,7 @@
                 My score will then be <span class='psychic'>3 / 2 = 1.5</span>, or 87.5% on the scale from -2 to 2.
             </p1>
             <br>
-            <button onclick="location.href='index.html'" class="vote-btn">Take me back to the quiz!</button>
-            <button onclick="location.href='https://github.com/probably-not-porter/type-finder'" class="vote-btn">Check out the code!</button>
+            
         </div>
         <script defer data-domain="typefinder.plib.dev" src="https://plausible.skate.plib.dev/js/script.js"></script>
 
