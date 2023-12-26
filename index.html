@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PKMN Type Finder</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/tooltip.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/types.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+    <body>
+        <!-- TOP NAV -->
+        <div id="top-nav">
+            <h1>What Pokemon Type are you?</h1>
+            <a href="#">How does this work?</a>
+        </div>
+        <br><br>
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
+            <h2 id="question"><span class='loading'>Loading...</span></h2>
+            <br>
+            <div id="button-row">
+                <span>How well does this describe you?</span>
+                <br><br>
+                <button onclick="apply(-2)" class="vote-btn btn-1">-2</button>
+                <button onclick="apply(-1)" class="vote-btn btn-2">-1</button>
+                <button onclick="apply(0)" class="vote-btn btn-3">0</button>
+                <button onclick="apply(1)" class="vote-btn btn-4">+1</button>
+                <button onclick="apply(2)" class="vote-btn btn-5">+2</button>
+                <br><br>
+                <button onclick="skip()" class="vote-btn">Skip Question</button>
+                <button onclick="finishQuiz()" class="vote-btn">View Results</button>
+            </div>
+            <br>
+            <div id="results">
+                <!-- <ul id="ranking"></ul> -->
+                <span id="complete"></span>
+            </div>
+        </div>
+
+        <!-- SCRIPTS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/ds.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

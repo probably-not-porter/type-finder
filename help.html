@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PKMN Type Finder - Help</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/tooltip.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <link rel="stylesheet" href="css/types.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <style>
+            p1{
+                width: 600px;
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top-nav">
+            <h1>How does this work?</h1>
+        </div>
+        <div id="content">
+            <h3>The Premise</h3>
+            <p1>
+                This is a silly little website to help you figure out what type you <span class='ghost'>(or your cat)</span> are.
+                It uses <a href="https://pokeapi.co/"><span class='electric'>PokeAPI</span></a> to get random PokeDex descriptions, which you can vote how much they relate.
+                After voting for a while, or after 80 questions, the types will be ranked in order of how much they match your answers.
+            </p1>
+            <br><br>
+            <h3>How is this scored</h3>
+            <p1>
+                Scores for types are determined as a percentage range from <span class='fighting'>0.00%</span> to <span class='grass'>100.00%</span>.
+                A score of <span class='grass'>100.00%</span> means that all your answers strongly agreed with each example of that type.
+                A score of <span class='fighting'>0.00%</span> means that all your answers strongly disagreed with each example of that type.
+                Each type starts out with a score of <span class='ground'>50.00%</span> (Neutral), and is influenced from there by your answers.
+            </p1>
+            <br><br>
+            <h3>Specifics</h3>
+            <p1>
+                If you want to know about the specifics, each score is calculated by taking the sum of your answers on a type,
+                dividing it by the total number of answers on that type, and mapping it to a percentage.<br><br>
+                <u>For example:</u><br>
+                On my first question, I vote "strongly agree" on a <span class='grass'>grass type</span> question (+2).
+                My answer sum for grass goes from 0 to 2. My total answers for <span class='grass'>grass type</span> goes from 0 to 1.
+                My score for <span class='grass'>grass type</span> can be calculated as <span class='psychic'>2 / 1 = 2</span>, or 100% on the scale from -2 to 2.
+                If I then vote for another <span class='grass'>grass type</span>, but only "mostly agree" (+1), this changes:<br>
+                My answer sum for <span class='grass'>grass type</span> goes from 2 to 3. My total answers for <span class='grass'>grass type</span> goes from 1 to 2.
+                My score will then be <span class='psychic'>3 / 2 = 1.5</span>, or 87.5% on the scale from -2 to 2.
+            </p1>
+            <br>
+            <button onclick="" class="vote-btn">Take me back to the quiz!</button>
+            <button onclick="" class="vote-btn">Check out the code!</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+:root {
+    --one: #F4683A;
+    --two: #FFA137;
+    --three: #F2C931;
+    --four: #6ABF48;
+    --five: #37A4AB;
+    --main: rgb(185, 185, 185);
+}
+
+.vote-btn{
+    border: none;
+    background: none;
+    border: 1px solid var(--main);
+    min-width: 50px;
+    padding: 5px;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.vote-btn:hover{
+    background: var(--main);
+    color: black;
+    transition-duration: 200ms;
+    border-radius: 5px;
+}
+.btn-1{
+    border: 1px solid var(--one);
+    color: var(--one);
+}
+.btn-2{
+    border: 1px solid var(--two);
+    color: var(--two);
+}
+.btn-3{
+    border: 1px solid var(--three);
+    color: var(--three);
+}
+.btn-4{
+    border: 1px solid var(--four);
+    color: var(--four);
+}
+.btn-5{
+    border: 1px solid var(--five);
+    color: var(--five);
+}
+
+.btn-1:hover{
+    color: white;
+    border-radius: 5px;
+    background-color: var(--one);
+}
+.btn-2:hover{
+    color: white;
+    border-radius: 5px;
+    background-color: var(--two);
+}
+.btn-3:hover{
+    color: white;
+    border-radius: 5px;
+    background-color: var(--three);
+}
+.btn-4:hover{
+    color: white;
+    border-radius: 5px;
+    background-color: var(--four);
+}
+.btn-5:hover{
+    color: white;
+    border-radius: 5px;
+    background-color: var(--five);
+}
