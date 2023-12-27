@@ -1,0 +1,48 @@
+.itemrain{
+    position:absolute ;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 20%;
+    
+  }
+  .itemrain div{
+    position:absolute ;
+    display:block ;
+    image-rendering:auto;
+  }
+  .itemrain img{
+    image-rendering: pixelated;
+  }
+  
+  @keyframes fall{
+    0%{
+        opacity:1;
+        top:-10%;
+        transform:rotate(0deg);
+    }
+    20%{
+        opacity:0.8;
+        transform:rotate(360deg);
+    }
+    40%{
+  
+        transform:rotate(-360deg);
+    }
+    60%{
+        
+        transform:rotate(360deg);
+    }
+    80%{
+    
+        transform:rotate(-360deg);
+    }
+    100%{
+        opacity:0.5;
+        top:600%;
+        transform:rotate(360deg);
+    }
+  }
