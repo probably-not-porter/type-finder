@@ -14,7 +14,7 @@
     <body>
         <!-- Item rain -->
         <div id='itemrain' class="itemrain"></div>
-        
+
         <!-- TOP NAV -->
         <div id="top-nav">
             <h1>What Pokemon Type are you?</h1>
@@ -22,7 +22,9 @@
             <button onclick="location.href='https://github.com/probably-not-porter/type-finder'" class="vote-btn">Check out the code!</button>
         </div>
         <br><br>
-
+        <div id="startscreen">
+            <button onclick="start()" style='font-size: 20px;' class="vote-btn btn-4">Begin the Quiz</button>
+        </div>
         <!-- MAIN CONTENT -->
         <div id="content">
             <h2 id="question"><span class='loading'>Loading...</span></h2>
@@ -47,6 +49,9 @@
         </div>
 
         <!-- SCRIPTS -->
+        <script>
+            document.getElementById("content").style.display = "none";
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="js/ds.js"></script>
         <script src="js/settings.js"></script>

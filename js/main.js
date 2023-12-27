@@ -51,7 +51,7 @@ function getNum(val) {
 
 function displayCompletion(){
     console.info(`-> Display progress meter.`);
-    document.getElementById("complete").innerHTML = `${(DATA.total / MAX_QUESTIONS * 100).toFixed(2)}% Complete`;
+    document.getElementById("complete").innerHTML = `${(DATA.total / MAX_QUESTIONS * 100).toFixed(2)}% Complete, ${DATA.total}/${MAX_QUESTIONS}`;
 }
 
 function apply(n){
@@ -64,7 +64,7 @@ function apply(n){
             DATA.types[type].score += n;
             DATA.types[type].count += 1;
         }
-        if (DATA.total >= MAX_QUESTIONS){
+        if (DATA.total == MAX_QUESTIONS){
             finishQuiz();
         }else{
             displayCompletion();
@@ -114,6 +114,10 @@ function finishQuiz(){
     sorted.forEach(e => 
         document.querySelector("#ranking"). 
             appendChild(e)); 
+}
+function start(){
+    document.getElementById("content").style.display = "block";
+    document.getElementById("startscreen").style.display = "none";
 }
 
 getItem(randomIntFromInterval(1, MAX_DEXNUM));
