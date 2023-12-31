@@ -1,5 +1,7 @@
 var DATA = {
     total: 0,
+    abilities: {},
+    habitat: {},
     types: {
         fighting: {
             score: 0,

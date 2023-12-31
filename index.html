@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pkmn Type Finder</title>
+        <meta name="viewport" content="width=320, initial-scale=1" />
+        <title>Pokédex Quiz</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/tooltip.css">
         <link rel="stylesheet" href="css/buttons.css">
@@ -17,15 +18,27 @@
 
         <!-- TOP NAV -->
         <div id="top-nav">
-            <h1>What Pokemon Type are you?</h1>
+            <h1>Pokédex Quiz</h1>
             <button onclick="location.href='help.html'" class="vote-btn">How does this work?</button>
-            <button onclick="location.href='https://github.com/probably-not-porter/type-finder'" class="vote-btn">Check out the code!</button>
         </div>
         <br><br>
         <div id="startscreen">
             <button onclick="start()" style='font-size: 20px;' class="vote-btn btn-4">Begin the Quiz</button>
         </div>
         <!-- MAIN CONTENT -->
+        <div id="results">
+            <h2>RESULTS</h2>
+            <button onclick="doMore()" class="vote-btn">Do more questions!</button>
+            <button onclick="location.reload()" class="vote-btn">Start Over</button>
+            <h3 style="border-bottom: 1px dashed white; padding: 5px;">Types</h3>
+            <ol id="type-ranking"></ol>
+            <br>
+            <h3 style="border-bottom: 1px dashed white; padding: 5px;">Top Abilities</h3>
+            <ol id="ability-ranking"></ol>
+            <br>
+            <h3 style="border-bottom: 1px dashed white; padding: 5px;">Top Habitats</h3>
+            <ol id="habitat-ranking"></ol>
+        </div>
         <div id="content">
             <h2 id="question"><span class='loading'>Loading...</span></h2>
             <br>
@@ -39,11 +52,9 @@
                 <button onclick="apply(2)" class="vote-btn btn-5">+2</button>
                 <br><br>
                 <button onclick="skip()" class="vote-btn">Skip Question</button>
-                <button onclick="finishQuiz()" class="vote-btn">View Results</button>
-            </div>
-            <br>
-            <div id="results">
-                <!-- <ul id="ranking"></ul> -->
+                <button onclick="viewResults()" class="vote-btn">View Results</button>
+                <button onclick="location.reload()" class="vote-btn">Start Over</button>
+                <br><br>
                 <span id="complete"></span>
             </div>
         </div>
