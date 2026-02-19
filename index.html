@@ -26,18 +26,20 @@
             <button onclick="start()" style='font-size: 20px;' class="vote-btn btn-4">Begin the Quiz</button>
         </div>
         <!-- MAIN CONTENT -->
-        <div id="results">
-            <h2>RESULTS</h2>
-            <button onclick="doMore()" class="vote-btn">Do more questions!</button>
-            <button onclick="location.reload()" class="vote-btn">Start Over</button>
-            <h3 style="border-bottom: 1px dashed white; padding: 5px;">Types</h3>
-            <ol id="type-ranking"></ol>
-            <br>
-            <h3 style="border-bottom: 1px dashed white; padding: 5px;">Top Abilities</h3>
-            <ol id="ability-ranking"></ol>
-            <br>
-            <h3 style="border-bottom: 1px dashed white; padding: 5px;">Top Habitats</h3>
-            <ol id="habitat-ranking"></ol>
+        <div style="text-align: center; width: 100%;">
+            <div id="results">
+                <h2>RESULTS</h2>
+                <button onclick="doMore()" class="vote-btn">Do more questions!</button>
+                <button onclick="location.reload()" class="vote-btn">Start Over</button>
+                <h3 style="border-bottom: 1px dashed white; padding: 5px;">Types</h3>
+                <ol id="type-ranking"></ol>
+                <br>
+                <h3 style="border-bottom: 1px dashed white; padding: 5px;">Top Abilities</h3>
+                <ol id="ability-ranking"></ol>
+                <br>
+                <h3 style="border-bottom: 1px dashed white; padding: 5px;">Top Habitats</h3>
+                <ol id="habitat-ranking"></ol>
+            </div>
         </div>
         <div id="content">
             <h2 id="question"><span class='loading'>Loading...</span></h2>
@@ -58,7 +60,7 @@
                 <span id="complete"></span>
             </div>
         </div>
-
+        <div style="position: absolute; bottom: 10px; left: 10px;">Website by Porter. Pokémon and All Respective Names are Trademark &amp; © of Nintendo 1996-2026</div>
         <!-- SCRIPTS -->
         <script>
             document.getElementById("content").style.display = "none";

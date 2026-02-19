@@ -1,3 +1,6 @@
+// SETTINGS
+const MAX_RESULTS = 10
+
 function getItem(n){
     console.info(`-> Fetching dex entry from API: #${n}.`);
     LOADING = true;
@@ -130,7 +133,7 @@ function randomIntFromInterval(min, max) { // min and max included
 function viewResults(){
     console.info(`-> View quiz.`);
     document.getElementById("content").style.display = "none"; // hide quiz content
-    document.getElementById("results").style.display = "block"; // show results content
+    document.getElementById("results").style.display = "inline-block"; // show results content
 
     // get type ranking
     document.getElementById("type-ranking").innerHTML = "";
@@ -177,9 +180,12 @@ function viewResults(){
 function sortList(list_elem){
     var subjects = document.querySelectorAll(`${list_elem} [data-subject]`); 
     var subjectsArray = Array.from(subjects); 
-    let sorted = subjectsArray.sort(comparator); 
-
-    sorted.forEach(e => 
+    let sorted = subjectsArray.sort(comparator);
+    console.log(sorted)
+    let sorted_max = sorted.slice(0, MAX_RESULTS);
+    console.log(sorted_max)
+    document.querySelector(list_elem).innerHTML = "";
+    sorted_max.forEach(e => 
         document.querySelector(list_elem). 
             appendChild(e)); 
 }
